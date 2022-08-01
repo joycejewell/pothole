@@ -1,0 +1,2 @@
+class PinDropsController < ApplicationController
+end
