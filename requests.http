@@ -1,0 +1,110 @@
+### users Index
+GET http://localhost:3000/users.json
+
+### users Create
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+"email": "Test name",
+"password": "Test password"
+}
+
+### users Show
+GET http://localhost:3000/users/1.json
+
+### users Update
+PATCH http://localhost:3000/users/1.json
+Content-Type: application/json
+
+{
+"email": "The Test",
+"password": "The password"
+}
+
+### users Destroy
+DELETE http://localhost:3000/users/1.json
+
+
+################################################
+
+
+### pin_drop Index
+GET http://localhost:3000/pin_drop.json
+
+### pin_drop Show
+GET http://localhost:3000/pin_drop.json
+
+### pin_drop Create
+POST http://localhost:3000/pin_drop.json
+Content-Type: application/json
+{
+  "name": "hazard_pothole",
+  "image_url": "hazard_pothole.png",
+  "blurb": "pothole ahead, be safe"
+}
+
+### pin_drop Update
+PATCH http://localhost:3000/pin_drop/1.json
+Content-Type: application/json
+{
+  "name": "hazard_pothole",
+  "image_url": "hazard_pothole.png",
+  "blurb": "pothole ahead, be safe!!"
+}
+
+### pin_drop Delete
+DELETE http://localhost:3000/pin_drop.json
+
+
+################################################
+
+
+### location Index
+GET http://localhost:3000/location.json
+### location Show
+GET http://localhost:3000/location.json
+
+### location Create
+POST http://localhost:3000/location.json
+Content-Type: application/json
+{
+  "latitude": 39.558491,
+  "longitude": -104.987709,
+  "pin_drop_id": 1
+}
+### location Update
+PATCH http://localhost:3000/location/1.json
+Content-Type: application/json
+{
+  "latitude": 39.612652,
+  "longitude": -105.016197,
+  "pin_drop_id": 2
+}
+
+### location Delete
+DELETE http://localhost:3000/location/1.json
+
+
+################################################
+
+
+### pin_drop_reaction Index
+GET http://localhost:3000/pin_drop_reaction.json
+
+### pin_drop_reaction Show
+GET http://localhost:3000/pin_drop_reaction.json
+
+### pin_drop_reaction Create
+POST http://localhost:3000/pin_drop_reaction.json
+Content-Type: application/json
+{
+  "name": "still there!",
+  "image_url": "no longer there."
+}
+
+### pin_drop_reaction Update
+PATCH http://localhost:3000/pin_drop_reaction/1.json
+
+### pin_drop_reaction Delete
+DELETE http://localhost:3000/pin_drop_reaction/1.json

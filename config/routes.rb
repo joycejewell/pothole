@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+#users
+  get "/user" => "user#index"
+  get "/user" => "user#show"
+  post "/user" => "user#create"
+  patch "/user" => "user#update"
+  delete "/user" => "user#destroy"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+#pin_drops
+  get ""
+
+#locations
+
+
+#pin_drop_reactions
+
+
 end

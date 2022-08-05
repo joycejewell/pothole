@@ -13,6 +13,6 @@ PinDrop.create(name: "hazard_pothole", image_url: "hazard-pothole.png", blurb: "
 
 Location.create(latitude: 39.558491, longitude: -104.987709, pin_drop_id: 1 )
 
-PinDropReaction.create(name: "still there", image_url: "placeholder", pin_drop_id: 1 )
+PinDropReaction.create(name: "still there", image_url: "still-there.png", pin_drop_id: 1 )
 
 puts "Done!"
