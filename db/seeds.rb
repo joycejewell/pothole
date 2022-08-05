@@ -9,4 +9,10 @@
 
 User.create!(email: "username", password: BCrypt::Password.create('Your_Password'))
 
+PinDrop.create(name: "hazard_pothole", image_url: "hazard-pothole.png", blurb: "pothole ahead, be safe!", user_id: 1)
+
+Location.create(latitude: 39.558491, longitude: -104.987709, pin_drop_id: 1 )
+
+PinDropReaction.create(name: "still there", image_url: "placeholder", pin_drop_id: 1 )
+
 puts "Done!"

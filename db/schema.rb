@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_05_005636) do
   enable_extension "plpgsql"
 
   create_table "locations", force: :cascade do |t|
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.string "pin_drop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
