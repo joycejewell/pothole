@@ -1,0 +1,2 @@
+class PinDropReactionController < ApplicationController
+end
