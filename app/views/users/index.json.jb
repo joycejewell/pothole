@@ -1,0 +1,6 @@
+@users.map do |user|
+{
+  user: user.id,
+  user: user.email,
+}
+end
