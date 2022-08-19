@@ -1,4 +1,20 @@
 class PinDropsController < ApplicationController
+    def index
+      @pin_drops = Pin_Drop.all
+      if params[:search]
+        @pin_drops = @pin_drops.where("email ILIKE ?", "%#{params[:search]}%")
+      end
+  
+      @pin_drops = @pin_drops.order(:id => :desc)
+  
+      render template: "pin_drops/index"
+    end
+  
+    def show
+      @pin_drop = PinDrop.find_by(id: params[:id])
+      render template: pin_drops/index
+    end
+
   def create
     pin_drop = PinDrop.new(
       name: params[:name],
@@ -8,9 +24,9 @@ class PinDropsController < ApplicationController
     )
 
     if pin_drop.save
-      render.json: { message: "pin dropped!" }, status :created
+      render json: { message: "pin dropped!" }, status: :created
     else
-      render.json: { errors: pin_drop.errors.full.messages }, status :bad_request
+      render json: { errors: pin_drop.errors.full.messages }, status: :bad_request
     end
-  
+  end
 end

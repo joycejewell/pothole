@@ -6,8 +6,9 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-"email": "Test name",
-"password": "Test password"
+"email": "joyceroop@gmail.com",
+"password": "password",
+"password_confirmation": "password"
 }
 
 ### users Show
