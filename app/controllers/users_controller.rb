@@ -9,10 +9,10 @@ class UsersController < ApplicationController
 
     render template: "users/index"
   end
-
+  
   def show
-    @user = User.find_by(id: params[:id])
-    render template: @users.as_json
+    @user = user.find_by(id: params[:id])
+    render template: "users/show"
   end
 
   def create
@@ -22,17 +22,26 @@ class UsersController < ApplicationController
       password_confirmation: params[:password_confirmation]
     )
 
-  def update
-    user = params["id"]
-    user = User.find_by(:id)
-    user.email = params[:email]
-    user.password = params[:password]
-  end
-
   if user.save
       render json: { message: "User created successfully" }, status: :created
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
+
+  def update
+    user_id = params["id"]
+    user = User.find(user_id)
+    user.email = params[:email]
+    user.password = params[:password]
+    render json: user
+  end
+
+  def destroy
+    user_id = params[:id]
+    user = User.find(user_id)
+    user.destroy
+    render json: {message: "user successfully deleted!"}
+  end
+
 end
