@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    render template: users/index
+    render template: @users.as_json
   end
 
   def create
@@ -22,10 +22,17 @@ class UsersController < ApplicationController
       password_confirmation: params[:password_confirmation]
     )
 
-    if user.save
-      render json: { message: "user created!" }, status: :created
+  def update
+    user = params["id"]
+    user = User.find_by(:id)
+    user.email = params[:email]
+    user.password = params[:password]
+  end
+
+  if user.save
+      render json: { message: "User created successfully" }, status: :created
     else
-      render json: { errors: user.errors.full.messages }, status: :bad_request
+      render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
 end

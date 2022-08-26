@@ -4,8 +4,7 @@ get "pin_drops/:id" => "pin_drops#show"
 get "locations/:id" => "locations#show"
 get "pin_drop_reactions/:id" => "pin_drop_reactions#show"
 
-
-  #users
+#users
   get "/users" => "users#index"
   post "/users" => "users#create"
   patch "/users/:id" => "users#update"
