@@ -32,7 +32,7 @@ class PinDropReactionController < ApplicationController
   def destroy
     pin_drop_reaction_id = params[:id]
     pin_drop_reaction = PinDropReaction.find(pin_drop_reaction_id)
-    user.destroy
+    pin_drop_reaction.destroy
     render json: {message: "reaction successfully deleted!"}
   end
 end

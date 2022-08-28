@@ -6,7 +6,7 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-"email": "joyceroop+1@gmail.com",
+"email": "joyceroop+11@gmail.com",
 "password": "password",
 "password_confirmation": "password"
 }
@@ -58,9 +58,9 @@ POST http://localhost:3000/location.json
 Content-Type: application/json
 
 {
-  "latitude": 39.55849,
-  "longitude": -104.98770,
-  "pin_drop_id": 1
+  "latitude": 39.9853,
+  "longitude": -104.8205,
+  "pin_drop_id": 2
 }
 
 ### location Delete
@@ -82,7 +82,8 @@ Content-Type: application/json
 
 {
   "name": "still there!",
-  "image_url": "no longer there."
+  "image_url": "still there.png",
+  "pin_drop_id": 2
 }
 
 ### pin_drop_reaction Delete
