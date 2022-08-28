@@ -26,28 +26,21 @@ DELETE http://localhost:3000/users/3.json
 GET http://localhost:3000/pin_drops.json
 
 ### pin_drop Show
-GET http://localhost:3000/pin_drop.json
+GET http://localhost:3000/pin_drops.json
 
 ### pin_drop Create
-POST http://localhost:3000/pin_drop.json
+POST http://localhost:3000/pin_drops.json
 Content-Type: application/json
-{
-  "name": "hazard_pothole",
-  "image_url": "hazard_pothole.png",
-  "blurb": "pothole ahead, be safe"
-}
 
-### pin_drop Update
-PATCH http://localhost:3000/pin_drop/1.json
-Content-Type: application/json
 {
   "name": "hazard_pothole",
   "image_url": "hazard_pothole.png",
-  "blurb": "pothole ahead, be safe!!"
+  "blurb": "pothole ahead, be safe",
+  "user_id": 2
 }
 
 ### pin_drop Delete
-DELETE http://localhost:3000/pin_drop.json
+DELETE http://localhost:3000/pin_drops/1.json
 
 
 ################################################
@@ -61,18 +54,11 @@ GET http://localhost:3000/location.json
 ### location Create
 POST http://localhost:3000/location.json
 Content-Type: application/json
+
 {
   "latitude": 39.558491,
   "longitude": -104.987709,
   "pin_drop_id": 1
-}
-### location Update
-PATCH http://localhost:3000/location/1.json
-Content-Type: application/json
-{
-  "latitude": 39.612652,
-  "longitude": -105.016197,
-  "pin_drop_id": 2
 }
 
 ### location Delete
@@ -91,6 +77,7 @@ GET http://localhost:3000/pin_drop_reaction.json
 ### pin_drop_reaction Create
 POST http://localhost:3000/pin_drop_reaction.json
 Content-Type: application/json
+
 {
   "name": "still there!",
   "image_url": "no longer there."

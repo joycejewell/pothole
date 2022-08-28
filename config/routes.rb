@@ -12,13 +12,11 @@ get "pin_drop_reactions/:id" => "pin_drop_reactions#show"
 #pin_drops
   get "/pin_drops" => "pin_drops#index"
   post "/pin_drops" => "pin_drops#create"
-  patch "/pin_drops/:id" => "pin_drops#update"
   delete "/pin_drops/:id" => "pin_drops#destroy"
 
 #locations
   get "/locations" => "locations#index"
   post "/locations" => "locations#create"
-  patch "/locations/:id" => "locations#update"
   delete "/locations/:id" => "locations#destroy"
 
 #pin_drop_reactions

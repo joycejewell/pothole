@@ -25,7 +25,14 @@ class PinDropReactionController < ApplicationController
     if pin_drop_reaction.save
       render json: { message: "reaction placed!" }, status: :created
     else
-      render json: { errors: pin_drop_reaction.errors.full.messages }, status: :bad_request
+      render json: { errors: pin_drop_reaction.errors.full_messages }, status: :bad_request
     end
+  end
+
+  def destroy
+    pin_drop_reaction_id = params[:id]
+    pin_drop_reaction = PinDropReaction.find(pin_drop_reaction_id)
+    user.destroy
+    render json: {message: "reaction successfully deleted!"}
   end
 end

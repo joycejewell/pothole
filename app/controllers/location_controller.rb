@@ -25,7 +25,14 @@ class LocationController < ApplicationController
     if location.save
       render json: { message: "location tied to pin!" }, status: :created
     else
-      render json: { errors: location.errors.full.messages }, status: :bad_request
+      render json: { errors: location.errors.full_messages }, status: :bad_request
     end
+  end
+
+  def destroy
+    location_id = params[:id]
+    location = Location.find(location_id)
+    location.destroy
+    render json: {message: "location successfully deleted!"}
   end
 end
