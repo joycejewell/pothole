@@ -10,20 +10,20 @@ get "pin_drop_reactions/:id" => "pin_drop_reactions#show"
   delete "/users/:id" => "users#destroy"
 
 #pin_drops
-  get "/pin_drops" => "pin_drops#ndex"
+  get "/pin_drops" => "pin_drops#index"
   post "/pin_drops" => "pin_drops#create"
   patch "/pin_drops/:id" => "pin_drops#update"
   delete "/pin_drops/:id" => "pin_drops#destroy"
 
 #locations
-  get "/locations" => "location#ndex"
-  post "/locations" => "location#create"
-  patch "/locations/:id" => "location#update"
-  delete "/locations/:id" => "location#destroy"
+  get "/locations" => "locations#index"
+  post "/locations" => "locations#create"
+  patch "/locations/:id" => "locations#update"
+  delete "/locations/:id" => "locations#destroy"
 
 #pin_drop_reactions
-get "/pin_drop_reactions" => "pin_drop_reaction#ndex"
-post "/pin_drop_reactions" => "pin_drop_reaction#create"
-delete "/pin_drop_reactions/:id" => "pin_drop_reaction#destroy"
+get "/pin_drop_reactions" => "pin_drop_reactions#index"
+post "/pin_drop_reactions" => "pin_drop_reactions#create"
+delete "/pin_drop_reactions/:id" => "pin_drop_reactions#destroy"
 
 end

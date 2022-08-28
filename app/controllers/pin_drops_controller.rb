@@ -1,6 +1,6 @@
 class PinDropsController < ApplicationController
     def index
-      @pin_drops = Pin_Drop.all
+      @pin_drops = Pindrop.all
       if params[:search]
         @pin_drops = @pin_drops.where("email ILIKE ?", "%#{params[:search]}%")
       end
@@ -11,12 +11,12 @@ class PinDropsController < ApplicationController
     end
   
     def show
-      @pin_drop = PinDrop.find_by(id: params[:id])
+      @pin_drop = Pindrop.find_by(id: params[:id])
       render template: pin_drops/index
     end
 
   def create
-    pin_drop = PinDrop.new(
+    pin_drop = Pindrop.new(
       name: params[:name],
       image_url: params[:image_url],
       blurb: params[:blurb],

@@ -23,7 +23,7 @@ DELETE http://localhost:3000/users/3.json
 
 
 ### pin_drop Index
-GET http://localhost:3000/pin_drop.json
+GET http://localhost:3000/pin_drops.json
 
 ### pin_drop Show
 GET http://localhost:3000/pin_drop.json

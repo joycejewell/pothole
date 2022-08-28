@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = user.find_by(id: params[:id])
+    @user = User.find_by(id: params[:id])
     render template: "users/show"
   end
 
@@ -28,14 +28,6 @@ class UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
-
-  # def update
-  #   user_id = params["id"]
-  #   user = User.find(user_id)
-  #   user.email = params[:email]
-  #   user.password = params[:password]
-  #   render json: user
-  # end
 
   def destroy
     user_id = params[:id]
