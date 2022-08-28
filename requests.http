@@ -48,6 +48,8 @@ DELETE http://localhost:3000/pin_drops/1.json
 
 ### location Index
 GET http://localhost:3000/location.json
+
+
 ### location Show
 GET http://localhost:3000/location.json
 
@@ -56,8 +58,8 @@ POST http://localhost:3000/location.json
 Content-Type: application/json
 
 {
-  "latitude": 39.558491,
-  "longitude": -104.987709,
+  "latitude": 39.55849,
+  "longitude": -104.98770,
   "pin_drop_id": 1
 }
 

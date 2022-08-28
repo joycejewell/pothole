@@ -7,7 +7,7 @@ class LocationController < ApplicationController
 
     @location = @location.order(:id => :desc)
 
-    render template: "location/index"
+    render template: "locations/index"
   end
 
   def show

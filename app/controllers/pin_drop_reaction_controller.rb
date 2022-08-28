@@ -1,6 +1,6 @@
 class PinDropReactionController < ApplicationController
   def index
-    @pin_drop_reaction = Pin_Drop.all
+    @pin_drop_reaction = PinDropReaction.all
     if params[:search]
       @pin_drop_reaction = @pin_drop_reaction.where("email ILIKE ?", "%#{params[:search]}%")
     end
