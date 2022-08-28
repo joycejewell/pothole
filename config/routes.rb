@@ -7,7 +7,6 @@ get "pin_drop_reactions/:id" => "pin_drop_reactions#show"
 #users
   get "/users" => "users#index"
   post "/users" => "users#create"
-  patch "/users/:id" => "users#update"
   delete "/users/:id" => "users#destroy"
 
 #pin_drops
@@ -25,7 +24,6 @@ get "pin_drop_reactions/:id" => "pin_drop_reactions#show"
 #pin_drop_reactions
 get "/pin_drop_reactions" => "pin_drop_reaction#ndex"
 post "/pin_drop_reactions" => "pin_drop_reaction#create"
-patch "/pin_drop_reactions/:id" => "pin_drop_reaction#update"
 delete "/pin_drop_reactions/:id" => "pin_drop_reaction#destroy"
 
 end

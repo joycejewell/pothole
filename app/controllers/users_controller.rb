@@ -29,13 +29,13 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-    user_id = params["id"]
-    user = User.find(user_id)
-    user.email = params[:email]
-    user.password = params[:password]
-    render json: user
-  end
+  # def update
+  #   user_id = params["id"]
+  #   user = User.find(user_id)
+  #   user.email = params[:email]
+  #   user.password = params[:password]
+  #   render json: user
+  # end
 
   def destroy
     user_id = params[:id]

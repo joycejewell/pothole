@@ -6,25 +6,17 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-"email": "joyceroopfs@gmail.com",
+"email": "joyceroop+1@gmail.com",
 "password": "password",
 "password_confirmation": "password"
 }
 
 ### users Show
-GET http://localhost:3000/users/1.json
+GET http://localhost:3000/users/2.json
 
-### users Update
-PATCH http://localhost:3000/users/1.json
-Content-Type: application/json
-
-{
-"email": "The Test",
-"password": "The password"
-}
 
 ### users Destroy
-DELETE http://localhost:3000/users/1.json
+DELETE http://localhost:3000/users/3.json
 
 
 ################################################
@@ -103,9 +95,6 @@ Content-Type: application/json
   "name": "still there!",
   "image_url": "no longer there."
 }
-
-### pin_drop_reaction Update
-PATCH http://localhost:3000/pin_drop_reaction/1.json
 
 ### pin_drop_reaction Delete
 DELETE http://localhost:3000/pin_drop_reaction/1.json
