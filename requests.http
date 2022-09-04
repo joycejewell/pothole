@@ -6,13 +6,13 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-"email": "joyceroop+11@gmail.com",
+"email": "joyceroop+13@gmail.com",
 "password": "password",
 "password_confirmation": "password"
 }
 
 ### users Show
-GET http://localhost:3000/users/2.json
+GET http://localhost:3000/users.json
 
 
 ### users Destroy
