@@ -24,4 +24,8 @@ get "pin_drop_reaction/:id" => "pin_drop_reaction#show"
 post "/pin_drop_reaction" => "pin_drop_reaction#create"
 delete "/pin_drop_reaction/:id" => "pin_drop_reaction#destroy"
 
+#sessions
+post "/sessions" => "sessions#create"
+
+
 end

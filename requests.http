@@ -88,3 +88,14 @@ Content-Type: application/json
 
 ### pin_drop_reaction Delete
 DELETE http://localhost:3000/pin_drop_reaction/1.json
+
+
+
+### sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "joyceroop@gmail.com",
+  "password": "adidas77"
+}
