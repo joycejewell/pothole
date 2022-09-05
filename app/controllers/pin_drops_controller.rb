@@ -7,7 +7,8 @@ class PinDropsController < ApplicationController
   
       @pin_drops = @pin_drops.order(:id => :desc)
   
-      render template: "pin_drops/index"
+      render json: @pin_drops.as_json
+
     end
   
     def show

@@ -7,7 +7,8 @@ class PinDropReactionController < ApplicationController
 
     @pin_drop_reaction = @pin_drop_reaction.order(:id => :desc)
 
-    render template: "pin_drop_reaction/index"
+    render json: @pin_drop_reaction.as_json
+
   end
 
   def show

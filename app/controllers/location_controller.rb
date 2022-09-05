@@ -7,7 +7,7 @@ class LocationController < ApplicationController
 
     @location = @location.order(:id => :desc)
 
-    render template: "locations/index"
+    render json: @location.as_json
   end
 
   def show
