@@ -19,7 +19,8 @@ class LocationController < ApplicationController
     location = Location.new(
       latitude: params[:latitude],
       longitude: params[:longitude],
-      pin_drop_id: params[:pin_drop_id]
+      pin_drop_id: params[:pin_drop_id],
+      description: params[:description]
     )
 
     if location.save
