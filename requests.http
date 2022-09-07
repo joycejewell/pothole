@@ -56,14 +56,14 @@ POST http://localhost:3000/location.json
 Content-Type: application/json
 
 {
-  "latitude": 39.918147,
-  "longitude": -105.25976,
-  "pin_drop_id": 1,
-  "description": "technical zone"
+  "latitude": 39.73728,
+  "longitude": -104.89876,
+  "pin_drop_id": 3,
+  "description": "ghost bike, Dan Perkins - https://bit.ly/3DaUogN"
 }
 
 ### location Delete
-DELETE http://localhost:3000/location/3.json
+DELETE http://localhost:3000/location/6.json
 
 
 ################################################
